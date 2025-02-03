@@ -29,29 +29,4 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService(DataSource dataSource) {
-        JdbcUserDetailsManager manager =
-                new JdbcUserDetailsManager(dataSource);
-        //(1st Way)
-        {
-        //(1st way) if the username is not present in memory
-        // we will create a user with password and role using createUser() method.
-
-        if (!manager.userExists("user1")) {
-            UserDetails user1 = User.withUsername("user1").password("{noop}password1").roles("USER").build();
-
-            manager.createUser(user1);
-        }
-    }
-    //(2nd way)
-    if(!manager.userExists("admin")) {
-        manager.createUser(User.withUsername("admin")
-                .password("{noop}adminpassword")
-                .roles("ADMIN")
-                .build());
-
-    }
-    return manager;
-    }
 }
