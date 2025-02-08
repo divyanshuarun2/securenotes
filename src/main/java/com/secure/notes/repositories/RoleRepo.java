@@ -1,7 +1,7 @@
 package com.secure.notes.repositories;
 
-import com.secure.notes.models.AppRole;
-import com.secure.notes.models.Role;
+import com.secure.notes.entity.AppRole;
+import com.secure.notes.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

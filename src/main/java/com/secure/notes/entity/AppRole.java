@@ -1,4 +1,4 @@
-package com.secure.notes.models;
+package com.secure.notes.entity;
 
 public enum AppRole {
     ROLE_USER,

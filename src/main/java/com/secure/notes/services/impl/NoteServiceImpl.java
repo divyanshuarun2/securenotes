@@ -1,6 +1,6 @@
 package com.secure.notes.services.impl;
 
-import com.secure.notes.models.Note;
+import com.secure.notes.entity.Note;
 import com.secure.notes.repositories.NoteRepository;
 import com.secure.notes.services.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
